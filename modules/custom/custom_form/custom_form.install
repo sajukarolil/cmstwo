@@ -1,0 +1,49 @@
+<?php
+/**
+ * @file
+ * Install, update, and uninstall functions for the custom form module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function custom_form_schema() {
+  $schema['custom_form'] = array(
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+		'length' => 255,
+        'description' => 'User name',
+      ),
+      'email' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 255,
+        'description' => 'User email',
+      ),
+      'phone' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'default' => 0,
+		'length' => 255,
+        'description' => 'User phone',
+      ),
+	  'website_url' => array(
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 255,
+        'description' => 'Website URL',
+      ),
+    ),
+    'primary key' => array('id'),
+
+  );
+  return $schema;
+}

@@ -1,0 +1,6 @@
+api_custom_config.settings_form:
+  title: 'API Custom Config'
+  base_route_name: api_custom_config.settings_form
+  names:
+    - api_custom_config.adminsettings
+

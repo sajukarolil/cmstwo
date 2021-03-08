@@ -1,0 +1,63 @@
+<?php
+
+use Drupal\node\NodeInterface;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+
+function send_notification_node_presave(NodeInterface $node) {
+   if ($node->getType() == 'article') { // checks if content type is article //WORKING
+	 drupal_set_message('This is a Custom message just before Saving the Article');
+   }
+}
+
+
+function send_notification_node_update(NodeInterface $node)
+{
+	if ($node->getType() == 'article') { 
+		drupal_set_message('This is a Custom message after Updating the Article. Id is: '.$node->id()); 
+		send_email_notification($node);
+   }
+}
+
+function send_notification_node_insert(NodeInterface $node)
+{
+	if ($node->getType() == 'article') { 
+		drupal_set_message('This is a Custom message after Saving the Article. Id is :'.$node->id());
+		send_email_notification($node);
+   }
+
+	if ($node->getType() == 'demo') { // checks if content type is demo
+	
+	  MenuLinkContent::create([
+		'title' => $node->label(),
+		'link' => ['uri' => 'internal:/node/'.$node->id()],
+		'menu_name' => 'main',
+		'weight' => 10,
+	  ])->save();
+	  
+	  drupal_set_message('A new menu for demo created under main navigation');
+   }
+}
+
+function send_email_notification($node) {
+	$system_site_config = \Drupal::config('system.site');
+	$site_email = $system_site_config->get('mail');
+	
+	$mailManager = \Drupal::service('plugin.manager.mail');
+	$module = ‘send_message’;
+	$key = 'create_article';
+	$to = $site_email;
+	$params['message'] = $node->get('body')->value;
+	$params['node_title'] = $node->label();
+	$langcode = \Drupal::currentUser()->getPreferredLangcode();
+
+	$send = true;
+
+	$result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+	if ($result['result'] !== true) {
+	drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+	}
+	else {
+	drupal_set_message(t('An email has been sent to site owner.'));
+	}
+}

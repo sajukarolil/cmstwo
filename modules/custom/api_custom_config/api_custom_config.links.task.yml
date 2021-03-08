@@ -1,0 +1,4 @@
+api_custom_config.adminsettings_tab:
+  route_name: api_custom_config.settings_form
+  title: Settings
+  base_route: api_custom_config.settings_form

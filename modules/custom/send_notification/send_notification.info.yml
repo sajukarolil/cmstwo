@@ -1,0 +1,5 @@
+name: 'Send Notification'
+description: 'A message will get displayed when a node of Content type Article is created or updated.'
+core: 8.x
+package: Custom Modules
+type: module

@@ -1,0 +1,156 @@
+/* ---------- Color Module Styles ----------- */
+
+body {
+  color: #3b3b3b;
+  background: #292929;
+}
+#page,
+#main-wrapper,
+.region-primary-menu .menu-item a.is-active,
+.region-primary-menu .menu-item--active-trail a {
+  background: #fff;
+}
+.tabs ul.primary li a.is-active {
+  background-color: #fff;
+}
+.tabs ul.primary li.is-active a {
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+#header {
+  background-color: #1d84c3;
+  background-image: -webkit-linear-gradient(top, #055a8e 0%, #1d84c3 100%);
+  background-image: linear-gradient(to bottom, #055a8e 0%, #1d84c3 100%);
+}
+a,
+.link {
+  color: #0071b3;
+}
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: #018fe2;
+}
+a:active,
+.link:active {
+  color: #23aeff;
+}
+.sidebar .block {
+  border-color: #f9f9f9;
+  background-color: #f6f6f2;
+}
+.site-footer {
+  background: #292929;
+}
+.region-header,
+.region-header a,
+.region-header li a.is-active,
+.region-header .site-branding__text,
+.region-header .site-branding,
+.region-header .site-branding__text a,
+.region-header .site-branding a,
+.region-secondary-menu .menu-item a,
+.region-secondary-menu .menu-item a.is-active {
+  color: #fffeff;
+}
+
+/* ---------- Color Form ----------- */
+
+[dir="rtl"] .color-form .color-palette {
+  margin-right: 20px;
+  margin-left: 0;
+}
+[dir="rtl"] .color-form .form-item label {
+  float: right;
+}
+[dir="rtl"] .color-form .color-palette .lock {
+  right: -20px;
+  left: 0;
+}
+
+
+
+/*S1---------SAJUK CREATED BELOW STYLES ON 18MAY20 FOR FOUR COLUMN BLOCKS-----*/
+
+.main_box_four_col .four_col_content {
+    display: inline-block;
+    width: 20%;
+    margin: 1%;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+.main_box_four_col .four_col_content .readmorebtn {
+    width: 37%;
+    background: #24a1ef;
+    border-radius: 5px;
+}
+.main_box_four_col .four_col_content h3 {
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #24a1ef;
+}
+.main_box_four_col .four_col_content .readmorebtn a {
+	color: #fff;
+	padding: 5px 12px;
+	text-decoration: none;
+	border-bottom: none !important;
+}
+
+/*E1-------------------------------------------------------------------------*/
+
+
+
+/*S2---------SAJUK CREATED BELOW STYLES ON 18MAY20 FOR TWO COLUMN BLOCKS-----*/
+
+.main_box_two_col .two_col_content .more {
+	width: 18% !important;
+}
+
+.main_box_two_col .two_col_content .readmorebtn {
+    width: 20%;
+    background: #4e996c;
+    border-radius: 5px;
+}
+
+.main_box_two_col .two_col_content .readmorebtn a{
+	color: #fff;
+	padding: 5px 12px;
+	text-decoration: none;
+	border-bottom: none !important;
+}
+
+.main_box_two_col .two_col_content h3{
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.main_box_two_col .two_col_content {
+    float: left;
+    width: 45%;
+    margin: 1%;
+    border: 1px solid #ddd;
+    padding: 15px;
+	min-height: 230px;
+	position: relative;
+}
+
+.main_box_two_col .two_col_content .content-box{
+    position: absolute;
+    top: 5px;
+    width: 90%;
+    padding: 10px;
+    color: #fff;
+	z-index: 500;
+}
+
+.main_box_two_col .two_col_content .two_col_img_box img{
+	width: 100%;
+	min-height: 225px;
+	height: 225px;
+}
+
+/*E2-------------------------------------------------------------------------*/
+
+

@@ -1,0 +1,5 @@
+name: Custom form
+description: Custom form made to use in block.
+type: module
+package: Custom Modules
+core_version_requirement: ^8.8.0 || ^9.0

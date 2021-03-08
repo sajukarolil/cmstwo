@@ -1,0 +1,10 @@
+api_custom_config.adminsettings:
+  type: config_object
+  label: 'API Custom Config module Schema settings'
+  mapping:
+    api_name:
+      type: text
+      label: 'API Name'
+    api_url:
+      type: text
+      label: 'API URL'

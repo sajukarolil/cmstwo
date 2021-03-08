@@ -1,0 +1,7 @@
+api_custom_config.settings_form:
+  title: 'API Custom Config'
+  route_name: api_custom_config.settings_form
+  description: 'Menu for API Custom Config'
+  parent: system.admin_config_development
+  weight: 99
+

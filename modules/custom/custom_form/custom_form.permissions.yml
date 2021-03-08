@@ -1,0 +1,4 @@
+access_admin_content:
+    title: 'Access - Admin Content'
+    description: 'Access to admin content of Dashboard created using Custom Form'
+    restrict access: TRUE

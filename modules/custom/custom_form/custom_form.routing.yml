@@ -1,0 +1,10 @@
+custom_form_list_guest_details:
+  path: 'cf/dashboard'
+  defaults:
+    _title: 'Dashboard'
+    _controller: '\Drupal\custom_form\Controller\cfController::dashboard'
+  requirements:
+    _permission: 'access_admin_content'
+  options:
+    no_cache: 'TRUE'
+    

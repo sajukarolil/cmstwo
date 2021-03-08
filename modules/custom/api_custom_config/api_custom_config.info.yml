@@ -1,0 +1,8 @@
+name: API Custom Config Module
+type: module
+description: This is API Custom Config Module
+core: 8.x
+package: Custom Modules
+dependencies:
+  - drupal:locale
+  - config_translation
